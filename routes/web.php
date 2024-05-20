@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/profile', [userController::class, 'index'])->name('usuarios');
+route::get('/profile', [userController::class, 'index'])->name('user.profile');
 
 
 route::view('/login', 'autenticate.login')->name('login.form');
