@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+route::get('/profile', [userController::class, 'index'])->name('usuarios');
+
+
+route::view('/login', 'autenticate.login')->name('login.form');
+//route::post('/auth', [loginController::class, 'auth'])->name('login.auth');
