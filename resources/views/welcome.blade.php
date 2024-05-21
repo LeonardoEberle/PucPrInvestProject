@@ -1,6 +1,6 @@
 @extends('layouts.main')
-@section('title', 'something')
+@section('title', 'Welcome')
 
 @section('content')
-    <p>must have something here</p>
+    <p>H O M E</p>
 @endsection

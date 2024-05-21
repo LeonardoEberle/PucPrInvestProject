@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Users;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
-use illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Facades\Hash;
 class userController extends Controller
 {
     public function index(){
-        $users = Users::all();
+        $users = Usuario::all();
 
         return view ('user.profile', ['users'=> $users]);
     }
 
-    function RandomId($length = 7) {
+    function RandomId($length = 5) {
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
         $charactersLength = strlen($characters);
         $randomId = '';
@@ -24,7 +23,20 @@ class userController extends Controller
         return $randomId;
     }
 
+
+
     public function create (){
-        //hash pass + id aleatorio
+        return view('authenticate.create');
+    }
+
+    public function store (Request $request){
+        $usuario = new Usuario;
+
+        $usuario -> email = $request -> email;
+        $usuario -> password = Hash::make($request->password);
+
+        $usuario->save();
+
+        return redirect('/profile');
     }
 }

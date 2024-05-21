@@ -15,12 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});//view inicial
 
-route::get('/profile', [userController::class, 'index'])->name('user.profile');
+route::get('/user/register', [userController::class, 'create'])->name('register.form');//mostra form usu cadastro
+route::post('/user',[userController::class, 'store'])->name('user.store');//salva form usu cadastro
+
+route::get('/profile', [userController::class, 'index'])->name('user.profile');//teste acessar usuarios existentes
 
 
-route::view('/login', 'autenticate.login')->name('login.form');
+//route::view('/login', 'authenticate.login')->name('login.form');
 //route::post('/auth', [loginController::class, 'auth'])->name('login.auth');

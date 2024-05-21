@@ -21,7 +21,7 @@
                   <a href="/" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a href="/user/register" class="nav-link">Registre-se</a>
+                  <a href="{{route('register.form')}}" class="nav-link">Registre-se</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">Login</a>
