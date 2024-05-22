@@ -6,18 +6,21 @@ use Illuminate\Http\Request;
 
 class loginController extends Controller
 {
-    public function auth (Request $request){
+    public function index(){
+        return view('authenticate.login');
+    }
+
+    public function store(Request $request) {
         $credentials = $request->validate([
-            'email'=> ['required', 'email'],
-            'password'=> ['required'],
+            'email' => ['required', 'email'],
+            'password' => ['required'],
         ]);
 
-        if(Auth::attempt($credentials)){
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('user.profile');
-            //intended vai voltar para ultima rota caso haja
-        }else{
-            return redirect()->back()->with('erro', 'email ou senha invalidos');
+            return redirect()->intended('/dashboard');
+        } else {
+            return redirect()->back()->with('error', 'Email ou senha inválidos');
         }
     }
 }

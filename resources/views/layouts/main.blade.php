@@ -18,16 +18,16 @@
             <div class="collapse navbar-collapse" id="navbar">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a href="/" class="nav-link">Home</a>
+                  <a href="{{route('welcome')}}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{route('register.form')}}" class="nav-link">Registre-se</a>
+                  <a href="{{route('user.form')}}" class="nav-link">Registre-se</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Login</a>
+                  <a href="{{route('login.form')}}" class="nav-link">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('user.profile')}}" class="nav-link">Perfil</a>
+                    <a href="#" class="nav-link">Perfil</a>
                 </li>
               </ul>
             </div>

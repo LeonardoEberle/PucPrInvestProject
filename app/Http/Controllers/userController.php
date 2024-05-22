@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 class userController extends Controller
 {
-    public function index(){
+    public function showAll(){
         $users = Usuario::all();
 
         return view ('user.profile', ['users'=> $users]);
@@ -34,7 +34,7 @@ class userController extends Controller
 
         $usuario -> usu_id = $id;
         $usuario -> usu_nome = $request -> nome;
-        $usuario -> usu_email = $request -> nome;
+        $usuario -> usu_email = $request -> email;
         $usuario -> usu_senha = Hash::make($request->senha);
         $usuario -> usu_telefone = $request -> telefone;
         $usuario -> usu_cpf = $request -> cpf;
@@ -43,6 +43,6 @@ class userController extends Controller
 
         $usuario->save();
 
-        return redirect('/profile');
+        return redirect('/');
     }
 }
