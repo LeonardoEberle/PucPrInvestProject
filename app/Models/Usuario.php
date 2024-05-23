@@ -2,12 +2,22 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
-class Usuario extends Model
+class Usuario extends Authenticatable
 {
-    use HasFactory;
+    use Notifiable;
+
+    protected $primaryKey = 'usu_id';
+    public $incrementing = false;
+    protected $keyType = 'string';
+
     public $timestamps = false;
+
+    public function getAuthPassword()
+    {
+        return $this->usu_senha;
+    }
 
 }

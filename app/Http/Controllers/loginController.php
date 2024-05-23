@@ -10,13 +10,17 @@ class loginController extends Controller
         return view('authenticate.login');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt([
+            'usu_email' => $credentials['email'],
+            'password' => $credentials['password']
+        ])) {
             $request->session()->regenerate();
             return redirect()->intended('/dashboard');
         } else {

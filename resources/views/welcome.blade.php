@@ -5,7 +5,7 @@
 
     <h1>Usuarios cadastrados</h1>
     @foreach ($users as $user)
-        <p>{{$user->usu_senha}}</p>
+        <p>{{$user->usu_nome}}</p>
     @endforeach
 
 @endsection
