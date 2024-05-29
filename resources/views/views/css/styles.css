@@ -1,0 +1,62 @@
+/* Reset básico para remover padding e margin */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para a navbar vertical */
+.vertical-navbar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 50px; /* Para não sobrepor a navbar horizontal */
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+.vertical-navbar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.vertical-navbar a:hover {
+    background-color: #575757;
+}
+
+/* Estilos para a navbar horizontal */
+.horizontal-navbar {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.horizontal-navbar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+}
+
+.horizontal-navbar a:hover {
+    background-color: #575757;
+}
+
+/* Estilos para o conteúdo principal */
+.main-content {
+    margin-left: 200px; /* Espaço para a navbar */
+    padding: 20px;
+}
