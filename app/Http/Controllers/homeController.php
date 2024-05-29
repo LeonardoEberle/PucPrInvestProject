@@ -9,8 +9,6 @@ use App\Models\Usuario;
 class homeController extends Controller
 {
     public function index(){
-        $users = Usuario::all();
-
-        return view ('welcome', ['users'=> $users]);
+        return view ('welcome');
     }
 }

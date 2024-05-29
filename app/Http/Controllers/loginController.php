@@ -27,4 +27,9 @@ class loginController extends Controller
             return redirect()->back()->with('error', 'Email ou senha inválidos');
         }
     }
+
+    public function destroy(){
+        Auth::logout();
+        return redirect('/');
+    }
 }

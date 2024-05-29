@@ -9,6 +9,7 @@ class Usuario extends Authenticatable
 {
     use Notifiable;
 
+    protected $guarded = [];
     protected $primaryKey = 'usu_id';
     public $incrementing = false;
     protected $keyType = 'string';
@@ -19,5 +20,7 @@ class Usuario extends Authenticatable
     {
         return $this->usu_senha;
     }
+
+
 
 }

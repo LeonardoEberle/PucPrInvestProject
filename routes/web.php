@@ -23,15 +23,19 @@ route::get('/', [homeController::class, 'index'])->name('welcome');//pag welcome
 route::controller(userController::class)->group(function(){
     route::get('/register', 'create')->name('user.form');//exibe form cad user
     route::post('/register', 'store')->name('user.store');//envia cad user db (cria user)
+    route::get('/profile', 'read')->name('user.profile')->middleware('auth');
+    route::put('/profile', 'update')->name('user.update')->middleware('auth');
 });
 
 route::controller(loginController::class)->group(function(){
     route::get('/login', 'index')->name('login.form');//exibe form login
     route::post('/login', 'store')->name('login.store');//envia soli login
-    route::get('/logout', 'destroy')->name('login.destroy');//
+    route::get('/logout', 'destroy')->name('login.destroy')->middleware('auth');//destroi a session(auth) caso exista
 });
 
-route::get('/dashboard', [dashController::class, 'index'])->name('dashboard');
+route::controller(dashController::class)->group(function(){
+    route::get('/dashboard', 'index')->name('dashboard')->middleware('auth');//acessa pag de dashboard quando logado
+});
 
 //route::view('/login', 'authenticate.login')->name('login.form');
 //route::post('/auth', [loginController::class, 'auth'])->name('login.auth');

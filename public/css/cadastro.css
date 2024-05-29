@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .navbar {
+    background-color: #000;
+  }
+  .navbar-brand img {
+    height: 40px;
+  }
+  h2{
+    text-align: center;
+  }
+  .btn-primary {
+--bs-text-opacity: 1;
+color: rgb(9, 19, 29)(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+}
+  .main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('sua-imagem.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+.login-form {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
