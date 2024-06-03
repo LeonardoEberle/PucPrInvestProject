@@ -2,24 +2,33 @@
 <html lang="en">
 <head>
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="/css/Styles.css">
+
+    {{-- Script --}}
     <script src="/js/Scripts.js"></script>
     <script src="../js/color-modes.js"></script>
-    <link rel="stylesheet" href="css/index.css">
+
+    {{-- Fonte --}}
     <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+
+    {{-- estilizacao externa --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/userViews.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="/css/dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css">
+
+    {{-- CSS ARQUIVOS --}}
+    <link rel="stylesheet" href="css/Styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/userViews.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
         <div class="container">
           <a class="navbar-brand" href="/dashboard">
-            <img src="../img/WhatsApp Image 2024-05-22 at 15.59.58.jpeg  " alt="Logo">
+            <img src="../img/logo.jpeg  " alt="Logo">
             <span class="ml-2">INVESTIFY</span>
           </a>
         </div>
@@ -41,22 +50,17 @@
                   </li>
                   <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      IDÉIAS
+                      EMPREENDIMENTOS
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      MINHA CARTEIRA
+                      MEUS EMPREENDIMENTOS
                     </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      ASSESSORIA
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      MINHAS IDÉIAS
+                      ACEITE
                     </a>
                   </li>
                   <li class="nav-item">
@@ -68,24 +72,14 @@
                 <ul class="nav flex-column mb-auto">
                   <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      FEEDBACK DE IDÉIAS
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
                       PROPOSTAS
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      MEUS CLIENTES
-                    </a>
-                  </li>
-                  <li class="nav-item">
+                  {{-- <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="#">
                       VISTORIA
                     </a>
-                  </li>
+                  </li> --}}
                 </ul>
                 <hr class="my-3">
 
@@ -123,7 +117,7 @@
 </body>
 <footer>
     <div class="container">
-      <p>Informações de Contato: investify@email.com | Telefone: (11) 01234-5678</p>
+      <p>Informações de Contato: investify@email.com | Telefone: (41) 01234-5678</p>
       <p>&copy; 2024 INVESTIFY. Todos os direitos reservados.</p>
     </div>
   </footer>
