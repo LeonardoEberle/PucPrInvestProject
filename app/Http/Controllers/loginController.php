@@ -18,7 +18,7 @@ class loginController extends Controller
         ]);
 
         if (Auth::attempt([
-            'usu_email' => $credentials['email'],
+            'usuario_email' => $credentials['email'],
             'password' => $credentials['password']
         ])) {
             $request->session()->regenerate();

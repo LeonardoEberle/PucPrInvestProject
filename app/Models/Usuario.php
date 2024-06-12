@@ -10,7 +10,7 @@ class Usuario extends Authenticatable
     use Notifiable;
 
     protected $guarded = [];
-    protected $primaryKey = 'usu_id';
+    protected $primaryKey = 'usuario_id';
     public $incrementing = false;
     protected $keyType = 'string';
 
@@ -18,7 +18,7 @@ class Usuario extends Authenticatable
 
     public function getAuthPassword()
     {
-        return $this->usu_senha;
+        return $this->usuario_senha;
     }
 
 

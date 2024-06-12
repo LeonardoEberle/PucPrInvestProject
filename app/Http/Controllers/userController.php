@@ -33,14 +33,16 @@ class userController extends Controller
         $id = $this->RandomId();
         $usuario = new Usuario;
 
-        $usuario -> usu_id = $id;
-        $usuario -> usu_nome = $request -> nome;
-        $usuario -> usu_email = $request -> email;
-        $usuario -> usu_senha = Hash::make($request->senha);
-        $usuario -> usu_telefone = $request -> telefone;
-        $usuario -> usu_cpf = $request -> cpf;
-        $usuario -> usu_genero = $request -> genero;
-        $usuario -> usu_cargo = 1;
+        $usuario -> usuario_id = $id;
+        $usuario -> usuario_nome = $request -> nome;
+        $usuario -> usuario_sobrenome = $request -> sobrenome;
+        $usuario -> usuario_email = $request -> email;
+        $usuario -> usuario_senha = Hash::make($request->senha);
+        $usuario -> usuario_telefone = $request -> telefone;
+        $usuario -> usuario_cpf = $request -> cpf;
+        $usuario -> usuario_genero = $request -> genero;
+        $usuario -> usuario_dataNascimento = $request -> nascimento;
+        $usuario -> usuario_cargo = 2;
 
         $usuario->save();
 
@@ -54,8 +56,26 @@ class userController extends Controller
     }
 
     public function update(Request $request){
-        $usuario = Auth::user();
-        // Usuario::findOrFail($usuario->usu_id)->update($request->all());
 
+        $usuario = Usuario::findOrFail(Auth::user()->usuario_id);
+        $usuario->usuario_nome = $request->nome;
+        $usuario->usuario_sobrenome = $request->sobrenome;
+        $usuario->usuario_email = $request->email;
+        $usuario->usuario_telefone = $request->telefone;
+        $usuario->usuario_biografia = $request->biografia;
+
+        $usuario->save();
+
+
+
+        return redirect('/dashboard');
+
+    }
+
+    public function delete (){
+
+        Usuario::findOrFail(Auth::user()->usuario_id)->delete();
+        Auth::logout();
+        return redirect('/');
     }
 }

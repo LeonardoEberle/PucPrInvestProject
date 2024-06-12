@@ -44,36 +44,22 @@
               <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                 <ul class="nav flex-column">
                   <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="/dashboard">
-                      HOME
-                    </a>
+                    <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="/dashboard">HOME</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      EMPREENDIMENTOS
-                    </a>
+                    <a class="nav-link d-flex align-items-center gap-2" href="#">EMPREENDIMENTOS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      MEUS EMPREENDIMENTOS
-                    </a>
+                    <a class="nav-link d-flex align-items-center gap-2" href="#">MEUS EMPREENDIMENTOS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      ACEITE
-                    </a>
+                    <a class="nav-link d-flex align-items-center gap-2" href="#">ACEITE</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      CRIAR NOVAS IDÉIAS
-                    </a>
+                    <a class="nav-link d-flex align-items-center gap-2" href="#">CRIAR NOVAS IDÉIAS</a>
                   </li>
-                </ul>
-                <ul class="nav flex-column mb-auto">
                   <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="#">
-                      PROPOSTAS
-                    </a>
+                    <a class="nav-link d-flex align-items-center gap-2" href="#">PROPOSTAS</a>
                   </li>
                   {{-- <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" href="#">
@@ -85,16 +71,10 @@
 
                 <ul class="nav flex-column mb-auto">
                   <li class="nav-item">
-                @auth
-                <a class="nav-link d-flex align-items-center gap-2" href="{{route('user.profile')}}">
-                    {{strtoupper(Auth::user()->usu_nome)}}
-                  </a>
-                @endauth
+                    <a class="nav-link d-flex align-items-center gap-2" href="{{route('user.profile')}}">{{strtoupper(Auth::user()->usuario_nome)}}</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link d-flex align-items-center gap-2" href="{{route('login.destroy')}}">
-                      SAIR
-                    </a>
+                    <a class="nav-link d-flex align-items-center gap-2" href="{{route('login.destroy')}}">SAIR</a>
                   </li>
                 </ul>
               </div>

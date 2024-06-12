@@ -14,6 +14,10 @@
           <input type="text" class="form-control" id="Nome" placeholder="Digite seu Nome" name="nome" required>
         </div>
         <div class="form-group col-md-6">
+            <label for="nome">Sobrenome</label>
+            <input type="text" class="form-control" id="Nome" placeholder="Digite seu Sobrenome" name="sobrenome" required>
+          </div>
+        <div class="form-group col-md-6">
           <label for="email ">Email</label>
           <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email" required>
         </div>
@@ -30,14 +34,20 @@
           <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" name="cpf"
         title="Digite um CPF no formato: xxx.xxx.xxx-xx" required>
         </div>
+        <div class="form-group col-md-6">
+            <label for="nascimento">Data de nascimento</label>
+            <input type="date" class="form-control" id="nascimento" name="nascimento" required>
+          </div>
         <div class="form-group col-md-3">
           <label for="genero">Gênero</label>
           <br>
           <input type="radio" name="genero" value="1" >Masculino
           <br>
           <input type="radio" name="genero" value="2" >Feminino
+          <br>
+          <input type="radio" name="genero" value="3" >Outros
         </div>
-        <button class="btn btn-primary w-100 py-2" type="submit" >Sign in</button>
+        <button class="btn btn-primary w-100 py-2" type="submit" >Registrar</button>
       </div>
       </form>
     </div>

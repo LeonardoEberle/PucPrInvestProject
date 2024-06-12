@@ -25,6 +25,7 @@ route::controller(userController::class)->group(function(){
     route::post('/register', 'store')->name('user.store');//envia cad user db (cria user)
     route::get('/profile', 'read')->name('user.profile')->middleware('auth');
     route::put('/profile', 'update')->name('user.update')->middleware('auth');
+    route::delete('/delete', 'delete')->name('user.delete')->middleware('auth');
 });
 
 route::controller(loginController::class)->group(function(){
@@ -36,6 +37,3 @@ route::controller(loginController::class)->group(function(){
 route::controller(dashController::class)->group(function(){
     route::get('/dashboard', 'index')->name('dashboard')->middleware('auth');//acessa pag de dashboard quando logado
 });
-
-//route::view('/login', 'authenticate.login')->name('login.form');
-//route::post('/auth', [loginController::class, 'auth'])->name('login.auth');

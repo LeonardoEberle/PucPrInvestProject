@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
         <div class="container">
           <a class="navbar-brand" href="/">
-            <img src="img/WhatsApp Image 2024-05-22 at 15.59.58.jpeg" alt="Logo">
+            <img src="img/logo.jpeg" alt="Logo">
             <span class="ml-2">INVESTIFY</span>
           </a>
             <ul class="navbar-nav ml-auto">
@@ -39,7 +39,7 @@
 
 <footer>
     <div class="container">
-      <p>Informações de Contato: investify@email.com | Telefone: (11) 01234-5678</p>
+      <p>Informações de Contato: investify@email.com | Telefone: (41) 01234-5678</p>
       <p>&copy; 2024 INVESTIFY. Todos os direitos reservados.</p>
     </div>
   </footer>
