@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar com Navbar</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome para os ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .navbar {
+        background-color: #333;
+    }
+    .navbar-brand {
+        color: #fff;
+    }
+    .sidebar {
+        background-color: #343a40;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 250px;
+        padding: 60px 0; /* Espaço para navbar */
+    }
+    .sidebar a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+    }
+    .sidebar a:hover {
+        background-color: #495057;
+    }
+    .sidebar .nav-link.active {
+        background-color: #007bff;
+    }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#"><i class="fab fa-bootstrap"></i> Sidebar</a>
+</nav>
+
+<div class="sidebar">
+    <a href="#" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+    <a href="#" class="nav-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+    <a href="#" class="nav-link"><i class="fas fa-file-alt"></i> Orders</a>
+    <a href="#" class="nav-link"><i class="fas fa-box-open"></i> Products</a>
+    <a href="#" class="nav-link"><i class="fas fa-users"></i> Customers</a>
+    <div class="mt-auto p-3">
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none">
+            <img src="path/to/user/image.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>mdo</strong>
+        </a>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

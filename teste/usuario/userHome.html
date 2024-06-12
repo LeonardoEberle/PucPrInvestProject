@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar com Navbar</title>
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome para os ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .navbar {
+        background-color: #333;
+    }
+    .navbar-brand {
+        color: #fff;
+    }
+    .sidebar {
+        background-color: rgb(1, 1, 82);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 220px;
+        padding: 60px 0; /* Espaço para navbar */
+    }
+    .sidebar a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+    }
+    .sidebar a:hover {
+        background-color: #495057;
+    }
+    .sidebar .nav-link.active {
+        background-color: #007bff;
+    }
+    .content {
+        margin-left: 250px;
+        padding: 20px;
+    }
+    h1{
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+    .content {
+        margin-left: 250px;
+        padding: 80px 20px 20px 20px; /* Ajuste para navbar */
+    }
+    .card {
+        background-color: rgb(1, 1, 82);
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        color: #fff
+    }
+</style>
+</head>
+<body>
+
+<div class="content">
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <a class="card-title" href="userPerfil">MEU PERFIL</a>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <a class="card-title" href="userIdeias">MINHAS IDEIAS</a>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <a class="card-title" href="userCarteira">MINHA CARTEIRA</a>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <a class="card-title" href="userPropostas">PROPOSTAS</a>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sidebar">
+    <h1>INVESTIFY</h1>
+    <a href="#" class="nav-link active"> Home</a>
+    <a href="#" class="nav-link"> Idéias</a>
+    <a href="userCarteira" class="nav-link"> Minha Carteira</a>
+    <a href="#" class="nav-link"> Assessoria</a>
+    <a href="userIdeias" class="nav-link"> Minhas ideias</a>
+    <a href="#" class="nav-link"> Criar novas ideias</a>
+    <a href="#" class="nav-link"> Feedback de ideias</a>
+    <a href="userPropostas" class="nav-link"> Propostas</a>
+    <a href="#" class="nav-link"> Meus clientes</a>
+    <a href="#" class="nav-link"> Vistoria</a>
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+      </ul>
+    </div>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

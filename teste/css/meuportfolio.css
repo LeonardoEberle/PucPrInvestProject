@@ -1,0 +1,55 @@
+#divisao{
+
+    background-color: #fff;
+    color: #000;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin-top: 3vh;
+    width: 50%;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+
+.tab-link {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.tab-link.active {
+    font-weight: bold;
+}
+
+.redirect-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.tab-content {
+    padding: 20px;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-top: 2px solid black;
+}
