@@ -71,7 +71,7 @@
                                 <a class="nav-link d-flex align-items-center gap-2" href="#">PROPOSTAS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">CRIAR NOVAS IDÉIAS</a>
+                                <a class="nav-link d-flex align-items-center gap-2" href="{{route('ideia.form')}}">CRIAR NOVAS IDÉIAS</a>
                             </li>
                             @endif
                         </ul>
