@@ -55,4 +55,5 @@ route::controller(IdeiaController::class)->group(function(){
 
     route::get('/novaideia', 'create')->name('ideia.form')->middleware('auth');//exibe formulario de criacao de ideia
     route::post('/ideiacriada', 'store')->name('ideia.store')->middleware('auth');//guarda os dados no banco de dados
+
 });

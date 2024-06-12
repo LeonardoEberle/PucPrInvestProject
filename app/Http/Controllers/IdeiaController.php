@@ -10,8 +10,11 @@ class IdeiaController extends Controller
 {
 
     public function index(){
+        $userId = auth()->user()->id;
 
-        return view ('carteira/carteiraList');
+        $ideias = Ideia::where('ideia_usuarioID', $userId)->get();
+
+        return view('carteira/carteiraList', ['ideias' => $ideias]);
     }
 
     public function list (){
