@@ -1,0 +1,63 @@
+#ideias {
+    background-color: #fff;
+    color: #000;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+}
+
+button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f1f1f1;
+}
+
+.accept-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.reject-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.view-more-btn {
+    background-color: #6c757d;
+    color: white;
+}

@@ -15,8 +15,8 @@
             <input type="text" class="form-control" id="nome" name="nome" value="{{$usuario->usuario_nome}}">
           </div>
           <div class="form-group">
-            <label for="nome">Sobrenome</label>
-            <input type="text" class="form-control" id="nome" name="sobrenome" value="{{$usuario->usuario_sobrenome}}">
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" class="form-control" id="sobrenome" name="sobrenome" value="{{$usuario->usuario_sobrenome}}">
           </div>
           <div class="form-group">
             <label for="telefone">Telefone</label>
