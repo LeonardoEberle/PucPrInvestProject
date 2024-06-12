@@ -42,11 +42,15 @@ route::controller(dashController::class)->group(function(){
 
 route::controller(IdeiaController::class)->group(function(){
     route::get('/ideias', 'list')->name('ideias.list')->middleware('auth');//lista ideias disponiveis
+
     route::get('/usuario/ideias', 'index')->name('mylist')->middleware('auth');//meus empreendimentos (espanha)
 
 
-    route::get('ideia/id', 'show')->name('ideia.show')->middleware('auth');//ideia especifica
-    route::get('ideia/id/update', 'exibir')->name('exibir')->middleware('auth');//exibir update da ideia
+    route::get('ideia-{id}', 'show')->name('ideia.show')->middleware('auth');//ideia especifica
+
+
+    route::get('atualizarideia-{id}', 'exibir')->name('exibir')->middleware('auth');//exibir update da ideia
+    route::put('atualizarideia', 'update')->name('ideia.update')->middleware('auth');//envia o update
 
 
     route::get('/novaideia', 'create')->name('ideia.form')->middleware('auth');//exibe formulario de criacao de ideia

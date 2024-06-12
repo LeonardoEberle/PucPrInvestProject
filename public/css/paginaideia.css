@@ -55,7 +55,7 @@
 }
 
 .footer {
-    display: flex;
+    text-align: center;
     justify-content: center;
     padding: 10px;
     border-top: 2px solid black;

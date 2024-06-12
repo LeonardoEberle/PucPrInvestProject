@@ -21,7 +21,7 @@
                 <td>{{$ideia->ideia_nome}}</td>
                 <td>{{$ideia->ideia_descricao}}</td>
                 <td>
-                    <a href="">Saiba Mais</a>
+                    <a href="/ideia-{{$ideia->ideia_id}}">Saiba Mais</a>
                 </td>
             </tr>
             @endforeach

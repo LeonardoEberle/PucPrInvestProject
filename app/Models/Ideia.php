@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Ideia extends Model
 {
     use HasFactory;
-
+    protected $guarded = [];
+    protected $primaryKey = 'ideia_id';
     public $timestamps = false;
 }

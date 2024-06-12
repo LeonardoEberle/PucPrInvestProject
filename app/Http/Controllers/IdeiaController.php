@@ -20,9 +20,6 @@ class IdeiaController extends Controller
         return view ('ideias/list', ['ideias'=> $ideias]);
     }
 
-    public function show(){
-        return view ('ideias/detail');
-    }
     public function exibir(){
         return view ('ideias/update');
     }
@@ -46,5 +43,10 @@ class IdeiaController extends Controller
         $ideia->save();
 
         return redirect('/ideias');
+    }
+
+    public function show($id){
+        $ideia = Ideia::findOrFail($id);
+        return view ('ideias/details' , ['ideia'=>$ideia]);
     }
 }
