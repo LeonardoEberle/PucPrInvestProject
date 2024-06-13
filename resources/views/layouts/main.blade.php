@@ -66,7 +66,7 @@
                             @endif
                             @if (Auth::user()->usuario_cargo != 3)
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2" href="#">MEUS EMPREENDIMENTOS</a></li>
+                                <a class="nav-link d-flex align-items-center gap-2" href="{{route('mylist')}}">MEUS EMPREENDIMENTOS</a></li>
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2" href="#">PROPOSTAS</a>
                             </li>

@@ -10,7 +10,7 @@ class IdeiaController extends Controller
 {
 
     public function index(){
-        $userId = auth()->user()->id;
+        $userId = Auth::user()->usuario_id;
 
         $ideias = Ideia::where('ideia_usuarioID', $userId)->get();
 
@@ -19,12 +19,22 @@ class IdeiaController extends Controller
 
     public function list (){
         $ideias = Ideia::all();
-
         return view ('ideias/list', ['ideias'=> $ideias]);
     }
 
-    public function exibir(){
-        return view ('ideias/update');
+    public function exibir($id){
+        $ideia = Ideia::findOrFail($id);
+        return view ('ideias/update', ['ideia'=>$ideia]);
+    }
+
+    public function update(Request $request){
+        Ideia::findOrFail($request->id)->update($request->all());
+        return redirect('carteira/carteiraList');
+    }
+
+    public function destroy(Request $request){
+        Ideia::findOrFail($request->id)->delete();
+        return redirect('carteira/carteiraList');
     }
 
     public function create (){
