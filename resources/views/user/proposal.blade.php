@@ -17,7 +17,7 @@
             <tbody>
               <tr>
                 <th scope="row">1</th>
-                <td>TESTIFY</td>
+                <td>{{$ideia->ideia_nome}}</td>
                 <td>R$200.000</td>
                 <td>80%</td>
               </tr>

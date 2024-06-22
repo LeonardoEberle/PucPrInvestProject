@@ -52,3 +52,6 @@ route::controller(IdeiaController::class)->group(function(){
     route::post('/ideiacriada', 'store')->name('ideia.store')->middleware('auth');//guarda os dados no banco de dados
 
 });
+
+
+Route::view('aceite', 'manager.acceptList');
