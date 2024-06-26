@@ -33,7 +33,7 @@ class IdeiaController extends Controller
     }
 
     public function destroy(Request $request){
-        Ideia::findOrFail($request->id)->delete();
+        Ideia::findOrFail($request->ideia_id)->delete();
         return redirect('dashboard');
     }
 

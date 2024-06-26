@@ -41,9 +41,10 @@
             <br>
             <button type="submit" class="btn btn-primary btn-block">salvar</button>
     </form>
-    <form action="" method="POST">
+    <form action="{{route('ideia.destroy')}}" method="POST">
         @csrf
         @method('DELETE')
+        <input type="hidden" name="ideia_id" value="{{$ideia->ideia_id}}">
         <button type="submit" class="btn btn-danger delete-btn">Deletar ideia</button>
     </form>
 </div>
