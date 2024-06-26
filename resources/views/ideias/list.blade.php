@@ -3,12 +3,10 @@
 
 @section('content')
 
-<div class="container" id="ideias">
+<div class="container bg-dark mt-5" id="ideias">
     <h2>Ideias Disponiveis</h2>
-
-
-    <table id="ideasTable">
-        <thead>
+    <table id="ideasTable" class="table table-striped table-bordered">
+        <thead class="thead-primary">
             <tr>
                 <th>Título</th>
                 <th>Informações</th>

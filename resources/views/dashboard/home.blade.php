@@ -11,7 +11,7 @@
                     <h3>{{$ideia->ideia_nome}}</h3>
                     <h6>Descricao:</h6>
                     <p class="card-text">{{$ideia->ideia_descricao}}</p>
-                    <a href="#" class="btn btn-secondary">CONHECER IDEIA</a>
+                    <a href="/ideia-{{$ideia->ideia_id}}" class="btn btn-dark">CONHECER IDEIA</a>
                 </div>
             </div>
         </div>
