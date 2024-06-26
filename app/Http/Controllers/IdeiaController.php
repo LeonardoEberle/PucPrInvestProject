@@ -28,13 +28,13 @@ class IdeiaController extends Controller
     }
 
     public function update(Request $request){
-        Ideia::findOrFail($request->id)->update($request->all());
-        return redirect('carteira/carteiraList');
+        Ideia::findOrFail($request->ideia_id)->update($request->all());
+        return redirect('/dashboard');
     }
 
     public function destroy(Request $request){
         Ideia::findOrFail($request->id)->delete();
-        return redirect('carteira/carteiraList');
+        return redirect('dashboard');
     }
 
     public function create (){
