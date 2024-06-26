@@ -62,4 +62,12 @@ class IdeiaController extends Controller
         $ideia = Ideia::findOrFail($id);
         return view ('ideias/details' , ['ideia'=>$ideia]);
     }
+
+    public function showAcc(){
+        $ideias = Ideia::where('ideia_aprovada', 0)->get();
+
+
+        return view('manager.acceptList', ['ideias'=>$ideias]);
+    }
+
 }
