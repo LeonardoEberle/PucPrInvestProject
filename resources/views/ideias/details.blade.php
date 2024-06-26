@@ -58,7 +58,10 @@
                     @endswitch
                 </p>
             </div>
-            <a href="{{route('proposta.form')}}" class="dropbtn">Fazer Proposta</a>
+            <a href="/propor-{{$ideia->ideia_id}}" class="dropbtn">Fazer Proposta</a>
+
+
+
             @if (Auth::user()->usuario_cargo != 2)
                 <form action="{{ route('ideia.update') }}" method="POST">
                     @csrf

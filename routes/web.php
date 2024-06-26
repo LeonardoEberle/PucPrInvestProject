@@ -55,5 +55,6 @@ route::controller(IdeiaController::class)->group(function(){
 
 route::controller(propostaController::class)->group(function(){
     route::get('propostas', 'index')->name('proposta.show')->middleware('auth');//listagem de propostas
-    route::get('propor', 'propform')->name('proposta.form')->middleware('auth');//criar uma proposta
+    route::get('propor-{id}', 'propform')->name('proposta.form')->middleware('auth');//criar uma proposta
+    route::post('proposta', 'create')->name('proposta.create')->middleware('auth');
 });
