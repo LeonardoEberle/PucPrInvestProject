@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Proposta;
 
-class propostaController extends Controller
+class PropostaController extends Controller
 {
-    public function index(){
-        return view('user.proposal');
-    }
-    public function propform(){
-        return view('ideias.propose');
+    public function index()
+    {
+        // Busca todas as propostas do banco de dados
+        $propostas = Proposta::all();
+
+        // Retorna a view 'user.proposal' com as propostas
+        return view('user.proposal', compact('propostas'));
     }
 }
