@@ -11,4 +11,9 @@ class Proposta extends Model
     protected $guarded = [];
     protected $primaryKey = 'proposta_id';
     public $timestamps = false;
+
+    public function ideia()
+    {
+        return $this->belongsTo(Ideia::class, 'proposta_ideiaID');
+    }
 }

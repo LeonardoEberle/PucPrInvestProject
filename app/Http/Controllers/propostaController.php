@@ -13,11 +13,15 @@ class PropostaController extends Controller
 
     public function index()
     {
-        // Busca todas as propostas do banco de dados
-        $propostas = Proposta::all();
+        $userId = Auth::user()->usuario_id;
 
-        // Retorna a view 'user.proposal' com as propostas
-        return view('user.proposal', compact('propostas'));
+        $propostas = Proposta::where('proposta_usuarioID', $userId)->get();
+        $ideias = Ideia::all();
+        $propostasrec = Proposta::whereHas('ideia', function ($query) use ($userId) {
+            $query->where('ideia_usuarioID', $userId);
+        })->get();
+
+        return view('user.proposal', compact('propostas', 'ideias', 'propostasrec'));
     }
     public function propform($id){
         $ideia = Ideia::findOrFail($id);
@@ -32,6 +36,12 @@ class PropostaController extends Controller
         $proposta -> proposta_ideiaID = $request->proposta_ideiaID;
 
         $proposta->save();
+
+        return redirect('/dashboard');
+    }
+
+    public function update(Request $request){
+        Proposta::findOrFail($request->proposta_id)->update($request->all());
 
         return redirect('/dashboard');
     }
