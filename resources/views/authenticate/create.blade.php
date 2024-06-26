@@ -8,7 +8,7 @@
         <a href="/">Voltar</a>
         <h2>Cadastro Investify</h2>
         <form class="row mb-3 needs-validation" action="{{route('user.store')}}" method="POST" novalidate>
-
+            @csrf
             <div class="form-group col-md-4">
                 <label for="nome">Nome</label>
                 <input type="text" class="form-control" id="Nome" placeholder="Digite seu Nome" name="nome" required>
@@ -31,7 +31,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="confirmarSenha">Confirmar Senha</label>
-                <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha" name="confirmarSenha" required>
+                <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha" name="" required>
             </div>
             <div class="form-group col-md-4">
                 <label for="cpf">Cpf</label>
