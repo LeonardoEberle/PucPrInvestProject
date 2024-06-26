@@ -18,8 +18,8 @@ class IdeiaController extends Controller
     }
 
     public function list (){
-        $ideias = Ideia::all();
-        return view ('ideias/list', ['ideias'=> $ideias]);
+        $ideias = Ideia::where('ideia_aprovada', 1)->get();
+        return view('ideias/list', ['ideias' => $ideias]);
     }
 
     public function exibir($id){
