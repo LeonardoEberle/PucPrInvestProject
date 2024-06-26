@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\dashController;
+use App\Http\Controllers\propostaController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\IdeiaController;
 use App\Http\Controllers\loginController;
@@ -39,7 +40,6 @@ route::controller(dashController::class)->group(function(){
     route::get('/dashboard', 'index')->name('dashboard')->middleware('auth');//acessa pag de dashboard quando logado
 });
 
-
 route::controller(IdeiaController::class)->group(function(){
     route::get('/ideias', 'list')->name('ideias.list')->middleware('auth');//lista ideias disponiveis
     route::get('usuario-ideias', 'index')->name('mylist')->middleware('auth');//meus empreendimentos
@@ -53,4 +53,6 @@ route::controller(IdeiaController::class)->group(function(){
 });
 
 
-Route::view('propostas', 'user.proposal');
+route::controller(propostaController::class)->group(function(){
+    route::get('propostas', 'index')->name('proposta.show')->middleware('auth');
+});

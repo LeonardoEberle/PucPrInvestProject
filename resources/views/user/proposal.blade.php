@@ -4,22 +4,22 @@
 @section('content')
 <div class="content">
         <div class="row row-cols-1 row-cols-md-2 g-4">
-          <table class="table caption-top">
-            <caption>Propostas</caption>
+            <h3>Propostas</h3>
+            <table class="table caption-top">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nome da Empresa</th>
+                <th scope="col">id</th>
+                <th scope="col">Nome do investidor</th>
                 <th scope="col">Valor oferecido</th>
                 <th scope="col">Porcentagem de compra</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
+                <th scope="row"></th>
                 <td></td>
-                <td>R$200.000</td>
-                <td>80%</td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
           </table>
