@@ -8,53 +8,64 @@
                 <h2>{{ $ideia->ideia_nome }}</h2>
             </div>
             <div class="footer">
-                <p>Descricao:{{$ideia->ideia_descricao}}</p>
-                <p>CNPJ:{{$ideia->ideia_cnpj}}</p>
+                <p>Descricao:{{ $ideia->ideia_descricao }}</p>
+                <p>CNPJ:{{ $ideia->ideia_cnpj }}</p>
                 @switch($ideia->ideia_faseID)
                     @case(1)
                         <p>Estado de: Planejamento</p>
-                        @break
+                    @break
+
                     @case(2)
                         <p>Estado de: Desenvolvimento</p>
-                        @break
+                    @break
+
                     @case(3)
                         <p>Estado de: Execucao</p>
-                        @break
+                    @break
+
                     @case(4)
                         <p>Estado de: Andamento</p>
-                        @break
+                    @break
+
                     @default
                         <p>nao foi possivel exibir</p>
                 @endswitch
-                <p>Valor: {{$ideia->ideia_valorMercado}}</p>
-                @switch($ideia->ideia_riscoID)
-                    @case(1)
-                        <p>Baixo</p>
+                <p>Valor: {{ $ideia->ideia_valorMercado }}</p>
+                <p>nivel de risco:
+                    @switch($ideia->ideia_riscoID)
+                        @case(1)
+                            Baixo
                         @break
-                    @case(2)
-                        <p>Baixo-medio</p>
+
+                        @case(2)
+                            Baixo-medio
                         @break
-                    @case(3)
-                        <p>Medio</p>
+
+                        @case(3)
+                            Medio
                         @break
-                    @case(4)
-                        <p>Alto-medio</p>
+
+                        @case(4)
+                            Alto-medio
                         @break
-                    @case(5)
-                        <p>Alto</p>
+
+                        @case(5)
+                            Alto
                         @break
-                    @default
-                        <p>nao ha um nivel de risco definido</p>
-            @endswitch
+
+                        @default
+                            nao ha um nivel de risco definido
+                    @endswitch
+                </p>
             </div>
-            <a href="" class="dropbtn">Fazer Proposta</a>
+            <a href="{{route('proposta.form')}}" class="dropbtn">Fazer Proposta</a>
             @if (Auth::user()->usuario_cargo != 2)
-                <form action="{{route('ideia.update')}}" method="POST">
+                <form action="{{ route('ideia.update') }}" method="POST">
                     @csrf
                     @method('PUT')
-                    <input type="hidden" name="ideia_riscoID" value="{{$ideia->ideia_riscoID}}">
+                    <input type="hidden" name="ideia_riscoID" value="{{ $ideia->ideia_riscoID }}">
                     <div class="form-group">
-                        <label for="ide_tipo">fase de operacao</label>
+                        <label for="ideia_risco">fase de operacao</label>
                         <select class="form-control" name="ideia_riscoID" required>
                             <option value="">Selecione o nivel de risco do projeto</option>
                             <option value="1">baixo</option>

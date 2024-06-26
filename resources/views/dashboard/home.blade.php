@@ -5,6 +5,7 @@
 <h1>Sugestoes do dia</h1>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         @foreach ($ideias as $ideia)
+        @if ($ideia->ideia_aprovada != 0)
         <div class="col">
             <div class="card">
                 <div class="card-body">
@@ -15,6 +16,7 @@
                 </div>
             </div>
         </div>
+        @endif
         @endforeach
     </div>
 @endsection

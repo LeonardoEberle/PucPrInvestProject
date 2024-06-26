@@ -9,4 +9,7 @@ class propostaController extends Controller
     public function index(){
         return view('user.proposal');
     }
+    public function propform(){
+        return view('ideias.propose');
+    }
 }
