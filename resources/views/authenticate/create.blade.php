@@ -1,4 +1,3 @@
-
 @extends('layouts.base')
 @section('title', 'Cadastre-se')
 
@@ -31,7 +30,7 @@
             </div>
             <div class="form-group col-md-4">
                 <label for="confirmarSenha">Confirmar Senha</label>
-                <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha" name="" required>
+                <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirme sua senha" name="confirmarSenha" required>
             </div>
             <div class="form-group col-md-4">
                 <label for="cpf">Cpf</label>
@@ -60,4 +59,19 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="js/cadastro.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector("form.needs-validation");
+        form.addEventListener("submit", function(event) {
+            const senha = document.getElementById("senha").value;
+            const confirmarSenha = document.getElementById("confirmarSenha").value;
+
+            if (senha !== confirmarSenha) {
+                event.preventDefault(); // Impede o envio do formulário
+                event.stopPropagation(); // Impede a propagação do evento
+                alert("As senhas não coincidem. Por favor, verifique.");
+            }
+        });
+    });
+</script>
 @endsection
