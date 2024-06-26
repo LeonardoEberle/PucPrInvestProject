@@ -61,7 +61,7 @@
                             </li>
                             @if (Auth::user()->usuario_cargo != 2)
                                 <li class="nav-item">
-                                    <a class="nav-link d-flex align-items-center gap-2" href="#">ACEITE</a>
+                                    <a class="nav-link d-flex align-items-center gap-2" href="{{route('ideiaAccept')}}">ACEITE</a>
                                 </li>
                             @endif
                             @if (Auth::user()->usuario_cargo != 3)
@@ -69,7 +69,7 @@
                                 <a class="nav-link d-flex align-items-center gap-2" href="{{route('mylist')}}">MEUS EMPREENDIMENTOS</a></li>
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2" href="#">PROPOSTAS</a>
-                            </li
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link d-flex align-items-center gap-2" href="{{route('ideia.form')}}">CRIAR NOVAS IDÉIAS</a>
                             </li>

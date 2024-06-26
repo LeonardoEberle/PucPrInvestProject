@@ -46,7 +46,6 @@ route::controller(IdeiaController::class)->group(function(){
     route::get('ideia-{id}', 'show')->name('ideia.show')->middleware('auth');//ideia especifica
     route::get('atualizarideia-{id}', 'exibir')->name('exibir')->middleware('auth');//exibir update da ideia
     route::put('atualizarideia', 'update')->name('ideia.update')->middleware('auth');//envia o update
-
     route::delete('deletaideia', 'destroy')->name('ideia.destroy')->middleware('auth');//deleta ideia
     route::get('/novaideia', 'create')->name('ideia.form')->middleware('auth');//exibe formulario de criacao de ideia
     route::post('/ideiacriada', 'store')->name('ideia.store')->middleware('auth');//guarda os dados no banco de dados
@@ -54,4 +53,4 @@ route::controller(IdeiaController::class)->group(function(){
 });
 
 
-//Route::view('aceite', 'manager.acceptList');
+Route::view('propostas', 'user.proposal');
